@@ -1,3 +1,4 @@
+// Actions
 const CAKE_ORDERED = "CAKE_ORDERED";
 function orderCake() {
   return {
@@ -5,3 +6,20 @@ function orderCake() {
     quantity: 1,
   };
 }
+
+// Reducers
+const initialState = {
+  totalNoOfCakes: 10,
+};
+
+// (previousState, action) => newState
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CAKE_ORDERED:
+      return {
+        totalNoOfCakes: state.totalNoOfCakes - state.quantity,
+      };
+    default:
+      return state;
+  }
+};
