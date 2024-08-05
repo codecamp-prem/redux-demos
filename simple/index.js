@@ -17,6 +17,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case CAKE_ORDERED:
       return {
+        ...state,
         totalNoOfCakes: state.totalNoOfCakes - state.quantity,
       };
     default:
