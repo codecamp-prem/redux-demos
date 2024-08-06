@@ -1,5 +1,4 @@
 # redux-demos topics covered
 
-- Redux (simple folder)
-- Redux Toolkit (toolkit folder)
+- Redux Toolkit use without React (simple folder)
 - React-Redux (react-redux folder)
