@@ -1,4 +1,4 @@
-import { decrement, increment, incrementByAmount } from "./counterSlice.js";
+import counterSlice from "./counterSlice.js";
 import store from "./store.js";
 
 // Function to update the UI with the current state
@@ -15,13 +15,13 @@ updateUI();
 
 // Add event listeners to buttons
 document.getElementById("increment").addEventListener("click", () => {
-  store.dispatch(increment());
+  store.dispatch(counterSlice.actions.increment());
 });
 
 document.getElementById("decrement").addEventListener("click", () => {
-  store.dispatch(decrement());
+  store.dispatch(counterSlice.actions.decrement());
 });
 
 document.getElementById("incrementByAmount").addEventListener("click", () => {
-  store.dispatch(incrementByAmount(5));
+  store.dispatch(counterSlice.actions.incrementByAmount(5));
 });
