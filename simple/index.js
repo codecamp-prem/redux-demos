@@ -1,5 +1,3 @@
-import { legacy_createStore as createStore } from "redux";
-
 // Actions
 const CAKE_ORDERED = "CAKE_ORDERED";
 function orderCake() {
@@ -26,5 +24,3 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
-
-const store = createStore(reducer);
